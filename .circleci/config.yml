@@ -72,7 +72,7 @@ jobs:
         type: string
 
     macos:
-      xcode: 26.3.0  # latest as of Debruary 2026
+      xcode: 26.3.0  # latest as of February 2026
 
     environment:
       <<: *global-environment
@@ -268,7 +268,7 @@ jobs:
 
   test-osx-cpp:
     macos:
-      xcode: 26.3.0  # latest as of Debruary 2026
+      xcode: 26.3.0  # latest as of February 2026
 
     steps:
       - checkout
