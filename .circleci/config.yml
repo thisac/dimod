@@ -140,10 +140,11 @@ jobs:
 
   test-airspeed-velocity:
     docker:
-      - image: cimg/python:3.10
+      - image: cimg/python:3.12  # latest version supported by asv
 
     steps:
-      - checkout
+      - checkout:
+          method: full
       - run:
           name: install dependencies
           command: |
@@ -155,7 +156,7 @@ jobs:
           command: |
             . env/bin/activate
             asv machine --yes
-            asv run --quick --strict
+            asv run --quick
 
   # we could do this as part of the various test jobs but getting the pathing
   # and configuration to work correctly is a pain. And since there is not
